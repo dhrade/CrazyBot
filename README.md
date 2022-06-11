@@ -59,7 +59,7 @@
 > apt install nodejs -y
 > apt install ffmpeg -y
 > apt install imagemagick -y
-> git clone https://github.com/GataNina-Li/GataBotV2
+> git clone https://github.com/dhrade/CrazyBot.git
 > cd GataBotV2
 > ls
 > npm install
@@ -82,7 +82,7 @@ en el archivo config.js del BOT:  #on restrict
 > ❇️ Para activar la lectura automática de mensajes escriba: #on autoread
 
 > ❇️ En caso que se cierre la sesión de Termux, escriba:
-> cd GataBot
+> cd CrazyBot
 > npm start
 
 > ❇️ Si necesita obtener un nuevo Código QR, escriba en Termux:
@@ -99,12 +99,8 @@ y el Whatsapp que este usando. Lo aconsejable es máximo 45 grupos
 --------- 
 ### 😸 USO DE WHATSAPP
 > #### *⚠️  GataBot no es compatible con la versión de WhatsApp Multi-Dispositivo (Multi-Device)*
-* [Opción 1 WhatsApp Recomendado](https://www.mediafire.com/file/1pr2m3f5lnlqcoq/L_%25CE%259B_%25E2%2586%2592J_%25CE%25A3_F_%25CE%259BV_6__VERSI%25C3%2593N_FINAL%25E1%25A5%25AB%25E1%25AD%25A1%25E1%258D%259D%25D6%259F%25E1%258D%259D%25D6%259F_2.22.2.73.apk/file).
-* [Opción 2 WhatsApp Recomendado](https://www.mediafire.com/file/444tuerbs99y1d2/%25E2%2598%25A3%25EF%25B8%258F%25E2%259F%25BF%25CD%25A1%25CD%259C%25E2%259C%25AA%25F0%259D%2590%258B%25CD%25A5%25F0%259D%2590%259E%25F0%259D%2590%259A%25E1%25B7%25A7%25F0%259D%2590%259D%25E2%25B7%25A8%25F0%259D%2590%259E%25F0%259D%2590%25AB%25F0%2596%25A3%2594%25F0%259D%2590%2582%25F0%259D%2590%25A8%25E1%25B7%2597%25F0%259D%2590%25A6%25E1%25B7%25A2%25F0%259D%2590%259A%25CD%25A5%25F0%259D%2590%25A7%25E1%25B7%25A4%25F0%259D%2590%259D%25E1%25B7%25A4%25F0%259D%2590%25A8%25E2%2598%2598%25EF%25B8%258E.apk/file).
-* [Opción 3 WhatsApp Recomendado](https://www.mediafire.com/file/g475ph68h8c047y/WhatsApp_2.21.19.21%25282%2529.apk/file).
-* [Opción 4 WhatsApp Recomendado](https://www.mediafire.com/file/drcy3rn45buoyr4/%25E2%2598%25A3%25EF%25B8%258F%25F0%2593%2580%25AC%25F0%259D%2597%25A7%25F0%259D%2597%25B6%25F0%259D%2597%25B8%25E2%259C%2587%25F0%259D%2597%25A7%25F0%259D%2597%25BC%25F0%259D%2597%25B8%25F0%2593%2580%25AC.apk/file).
-* [Opción 5 WhatsApp Recomendado](https://www.mediafire.com/file/pxfksca3yatav5f/%25E0%25A6%2594%25E0%25A7%25A3%25CD%25A1%25CD%259C%25E2%258D%25A3%25E2%2582%25AE%25C9%2584%25C9%258C%25C9%2583%25C3%2598%25E0%25AF%2580%25CD%259C%25E2%2582%25A6%25C6%2597%25E2%2582%25AE%25C9%258C%25C3%2598%25E2%259E%25A3%25E2%259C%25AA_%25E2%25A9%2594-7.apk/file).
---------- 
+* [Opción 1 WhatsApp Recomendado] whatsapp business
+* 
 ### 🌟 CREADORA 
  
 [![GataNina-Li](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li) 
