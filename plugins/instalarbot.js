@@ -1,3 +1,4 @@
+/*
 let handler = async m => m.reply(`
 ⚡▁ ▂ ▄ ▅ ▆ ▇ █ 🚆 █ ▇ ▆ ▅ ▄ ▂ ▁⚡
 
@@ -63,3 +64,4 @@ handler.tags = ['info']
 handler.command = /^instalarbot$/i
 
 module.exports = handler
+*/
