@@ -1,3 +1,4 @@
+/*
 //
 const fetch = require('node-fetch')
 const FormData = require('form-data')
@@ -29,3 +30,4 @@ handler.botAdmin = false
 handler.fail = null
 
 module.exports = handler
+*/
