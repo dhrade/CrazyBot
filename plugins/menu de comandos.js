@@ -1,72 +1,34 @@
-//let vn = './media/mariana.mp3'
-//NO MODIFIQUES EL NÚMERO DE LA CREADORA NI EL NOMBRE.. SOLO AGREGA LA INFORMACIÓN QUE TU QUIERAS O EDITALO A TU MANERA PERO DEJANDO LOS CREDITOS
-//PUEDES AGREGAR OTRA FILAS DE PAYPAL, GRUPOS, PERO DEJA ALGUNOS CREDITOS, YA QUE ES LA UNICA MANERA DE INGRESOS DEL BOT
-
-//SI VAS A MODIFICAR TODO Y HACER PASAR COMO SI FUERA TU BOT (CREADO POR TI) SOLO TE PIDO QUE SI ESTA EN TUS POSIBILIDADES DONES UN POCO
-let handler = async (m, { conn, command, text, usedPrefix }) => {
-let fetch = require('node-fetch')
+let PhoneNumber = require('awesome-phonenumber')
+let levelling = require('../lib/levelling')
+let handler = async (m, { conn, usedPrefix }) => {
+let pp = './Menu2.jpg'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let mentionedJid = [who]
+try {
+//    pp = await conn.getProfilePicture(who)
+} catch (e) {
+} finally {
+let about = (await conn.getStatus(who).catch(console.error) || {}).status || ''
+let { name, limit, exp, banned, lastclaim, registered, regTime, age, level } = global.DATABASE.data.users[m.sender]
+let { min, xp, max } = levelling.xpRange(level, global.multiplier)
 let username = conn.getName(who)
-let pp = 'https://i.imgur.com/BfsbCOR.jpg'
-let menu =`
+let str = `
 ╭══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╮
-║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨
+║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | Miauu
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ║❇️ *¡𝗛ola! ${username}* ❇️
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-║🔰 *Creadora/Editora: Gata Dios* 
+║🔰 *Miaaauuu* 
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ╰══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╯
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *INFORMACIÓN|MENUS*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠⚜️ _${usedPrefix}donar_
-┣ ↠⚜️ _${usedPrefix}creditos_
-┣ ↠⚜️ _${usedPrefix}infobot_
-┣ ↠⚜️ _${usedPrefix}grupos_
-┣ ↠⚜️ _${usedPrefix}reglas_
 ┣ ↠⚜️ _${usedPrefix}menuaudios_
 ┣ ↠⚜️ _${usedPrefix}menu2_
 ┣ ↠⚜️ _${usedPrefix}estado_
 ┣ ↠⚜️ _¿Qué es un Bot?_
 ┣ ↠⚜️ _Codigos para audios_
 ┣ ↠⚜️ _Términos y condiciones_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
-┃ *CUENTAS OFICIALES GATABOT*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠✅ _${usedPrefix}cuentasgatabot_
-┣ ↠✅ _${usedPrefix}cuentasgb_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
-┃ *OBTENER A GATABOT*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠🛎 _${usedPrefix}instalarbot_
-┣ ↠🛎 _${usedPrefix}procesobot_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
-┃ *REPORTA FALLOS DE COMANDOS*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┃ *Reporta cualquier comando que falle*   
-┃ *para poder solucionarlo*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠📮 _${usedPrefix}bug *tal comando con fallas*_
-┣ ↠📮 _${usedPrefix}report *tal comando con fallas*_
-┣ ↠📮 _${usedPrefix}reporte *tal comando con fallas*_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
-┃ *NÚMERO DEl PROPIETARIO/A*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠🐈 _${usedPrefix}owner_
-┣ ↠🐈 _${usedPrefix}contacto_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
-┃ *UNE UN BOT A TU GRUPO*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠🤖 _${usedPrefix}join *enlace del grupo*_
-┣ ↠🤖 _${usedPrefix}unete *enlace del grupo*_ 
-┣ ↠🤖 _${usedPrefix}bots *ver bots*_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *TOPS*
@@ -93,7 +55,7 @@ let menu =`
 ┣ ↠👾 _${usedPrefix}lesbi *@tag / nombre*_
 ┣ ↠🧩 _${usedPrefix}pajero *@tag / nombre*_
 ┣ ↠👾 _${usedPrefix}pajera *@tag / nombre*_
-┣ ↠🧩 _${usedPrefix}puta *@tag / nombre*_
+┣ ↠🧩 _${usedPrefix}trolls *@tag / nombre*_
 ┣ ↠👾 _${usedPrefix}puto *@tag / nombre*_
 ┣ ↠🧩 _${usedPrefix}rata *@tag / nombre*_
 ┣ ↠👾 _${usedPrefix}manco *@tag / nombre*_
@@ -106,8 +68,8 @@ let menu =`
 ┣ ↠🧩 _${usedPrefix}amigorandom | amigo | amistad_
 ┣ ↠👾 _${usedPrefix}slot *cantidad*_
 ┣ ↠🧩 _${usedPrefix}ppt *piedra / papel / tijera*_
-┣ ↠👾 _${usedPrefix}prostituta *@tag / nombre*_
-┣ ↠🧩 _${usedPrefix}prostituto *@tag / nombre*_
+┣ ↠👾 _${usedPrefix}troll *@tag / nombre*_
+┣ ↠🧩 _${usedPrefix}troll *@tag / nombre*_
 ┣ ↠👾 _${usedPrefix}doxxear *@tag*_
 ┣ ↠🧩 _${usedPrefix}doxxeame_
 ┗━━━━━━━━━━━━━━━━━━┛
@@ -287,14 +249,6 @@ let menu =`
 ┣ ↠🎲 _${usedPrefix}experiencia | exp
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
-┃ *COMANDOS +18*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┃ *Usalo si el grupo te lo permite*
-┃ *NO nos hacemos responsables*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠🔞 _${usedPrefix}labiblia_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
 ┃ *EFECTOS PARA AUDIOS*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┃ *Responde a un audio o nota de voz*
@@ -338,13 +292,6 @@ let menu =`
 ┣ ↠👤 _${usedPrefix}start_
 ┣ ↠👤 _${usedPrefix}next_
 ┣ ↠👤 _${usedPrefix}leave_
-┗━━━━━━━━━━━━━━━━━━┛
-┏━━━━━━━━━━━━━━━━━━┓
-┃ *CONVIERTETE EN BOT*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┣ ↠❇️ _${usedPrefix}stop_
-┣ ↠❇️ _${usedPrefix}jadibot | serbot_
-┣ ↠❇️ _${usedPrefix}getcode_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *LOGOS PERSONALIZADOS*
@@ -405,9 +352,14 @@ let menu =`
 ┣ ↠👑 _${usedPrefix}bcbot *texto*_
 ┣ ↠💎 _${usedPrefix}bcgc *texto*_
 ┗━━━━━━━━━━━━━━━━━━┛
-𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨`.trim()
-conn.send3ButtonLoc(m.chat, (await fetch(pp)).buffer(), `
-⁖ᯓ፨҈༺ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 ༻፨҈ᯓ⁖
-`.trim(), menu, '😸 𝙃𝙊𝙇𝘼 😸', `Hola`, '🔊 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘼𝙐𝘿𝙄𝙊𝙎 🔊', `#menuaudios`, '⚡️ 𝙈𝙀𝙉𝙐 𝙉𝙐𝙀𝙑𝙊 ⚡️', `#menu`, m, false, { contextInfo: { mentionedJid }})}
-handler.command = /^(menucompleto|menúcompleto|completomemu|completomemú|mcompleto|Menucompleto|Mcompleto|Mnúcompleto)$/i
+`.trim()
+let mentionedJid = [who]
+conn.send3ButtonImg(m.chat, pp, menu, '©GataBot - Miauu', '🤡 𝙃𝙊𝙇𝘼 Michu michu 🤡', `Hola`, '🔊 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘼𝙐𝘿𝙄𝙊𝙎 🔊', `#menuaudios`, '⚡️ 𝙈𝙀𝙉𝙐 𝙉𝙐𝙀𝙑𝙊 ⚡️', `#menu`, m, false, { contextInfo: { mentionedJid }})   
+//await await await await await await conn.sendFile(m.chat, vn, 'mariana.mp3', null, m, true, {
+//type: 'audioMessage', 
+//ptt: true 
+//})
+}
+handler.command = /^(mcompleto)$/i
+handler.fail = null
 module.exports = handler
