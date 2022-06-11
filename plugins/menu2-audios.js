@@ -146,9 +146,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 ⎪➫🔊 _Buen día grupo | 🙌_
 ⎪➫🔊 _Las reglas del grupo_
 ╰══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╯
-
 ╭════• ೋ•✧๑♡๑✧•ೋ •════╮
-                      🐈 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨 🐈
+               🐈 𝙂𝙖𝙩𝙖Bot 🐈
          0:40 ━❍──────── -8:39
          ↻     ⊲  Ⅱ  ⊳     ↺
          VOLUMEN: ▁▂▃▄▅▆▇ 100%
