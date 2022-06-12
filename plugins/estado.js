@@ -5,11 +5,11 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 
 *ミ💖 ¡Hola! estimado/a usuario/a 💖彡*
 
-*ミ🤖 Estado de GataBot 🤖彡*
+*ミ🤖 Estado de 🤡𝘾𝙧𝙖𝙯𝙮Bot🤡 🤖彡*
 *=> ✅ Bot activo y de uso público*
 
 ╰══✨• ೋ•✨๑๑💗๑๑✨•ೋ •✨══╯
-`.trim(), 'Gata Dios', '🌀 MENÚ 🌀', `${usedPrefix}menu`, '🔆 MENÚ COMPLETO 🔆', `${usedPrefix}menucompleto`, '♨️ MENÚ DE AUDIOS ♨️', `${usedPrefix}menuaudios`)
+`.trim(), '🤡𝘾𝙧𝙖𝙯𝙮Bot🤡', '🌀 MENÚ 🌀', `${usedPrefix}menu`, '🔆 MENÚ COMPLETO 🔆', `${usedPrefix}menucompleto`, '♨️ MENÚ DE AUDIOS ♨️', `${usedPrefix}menuaudios`)
 }
 handler.command = /^(estado|status|estate|state|stado|stats)$/i
 
