@@ -12,14 +12,14 @@ let { name, limit, exp, banned, lastclaim, registered, regTime, age, level } = g
 let { min, xp, max } = levelling.xpRange(level, global.multiplier)
 let username = conn.getName(who)
 let str = `
-╭══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╮
-║═ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | Miauu
+╭══〘 🤡⚡️🤡⚡️🤡⚡️🤡 〙══╮
+║═ 🤡𝘾𝙧𝙖𝙯𝙮Bot🤡
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ║❇️ *¡𝗛ola! ${username}* ❇️
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-║🔰 *Miaaauuu* 
+║🔰 *HAHAHAHAHAHA* 
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-╰══〘 🐈⚡️🐈⚡️🐈⚡️🐈 〙══╯
+╰══〘 🤡⚡️🤡⚡🤡⚡️🤡 〙══╯
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *INFORMACIÓN|MENUS*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
@@ -74,12 +74,12 @@ let str = `
 ┣ ↠🧩 _${usedPrefix}doxxeame_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
-┃ *CONVERSA CON GATABOT*
+┃ *CONVERSA CON CrazyBot*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┃ *Puedes dirigirte tambien como* 
 ┃ *(bot|bixby|siri|cortana|alexa)*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┃↠😼 _${usedPrefix}simi *texto*_
+┃↠🤡 _${usedPrefix}simi *texto*_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃ *DESCARGAS*
@@ -180,9 +180,9 @@ let str = `
 ┣ ↠🪄 _${usedPrefix}estilo *texto*_
 ┗━━━━━━━━━━━━━━━━━━┛
 ┏━━━━━━━━━━━━━━━━━━┓
-┃ *SUBIR ESTADOS A GATABOT*
+┃ *SUBIR ESTADOS A CrazyBot*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┃ *¡Sube estados a la cuenta de GataBot!*
+┃ *¡Sube estados a la cuenta de CrazyBot!*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┣ ↠📸 _${usedPrefix}subirestado *texto / video|imagen*_
 ┣ ↠📸 _${usedPrefix}subirestado *texto / gif*_
@@ -354,7 +354,7 @@ let str = `
 ┗━━━━━━━━━━━━━━━━━━┛
 `.trim()
 let mentionedJid = [who]
-conn.send3ButtonImg(m.chat, pp, menu, '©GataBot - Miauu', '🤡 𝙃𝙊𝙇𝘼 Michu michu 🤡', `Hola`, '🔊 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘼𝙐𝘿𝙄𝙊𝙎 🔊', `#menuaudios`, '⚡️ 𝙈𝙀𝙉𝙐 𝙉𝙐𝙀𝙑𝙊 ⚡️', `#menu`, m, false, { contextInfo: { mentionedJid }})   
+conn.send3ButtonImg(m.chat, pp, menu, '©CrazyBot', '🤡 𝙃𝙊𝙇𝘼 feo 🤡', `Hola`, '🔊 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘼𝙐𝘿𝙄𝙊𝙎 🔊', `#menuaudios`, '⚡️ 𝙈𝙀𝙉𝙐 𝙉𝙐𝙀𝙑𝙊 ⚡️', `#menu`, m, false, { contextInfo: { mentionedJid }})   
 //await await await await await await conn.sendFile(m.chat, vn, 'mariana.mp3', null, m, true, {
 //type: 'audioMessage', 
 //ptt: true 
