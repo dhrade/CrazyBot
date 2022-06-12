@@ -1,3 +1,4 @@
+/*
 // NO QUITES NI CAMBIES NADA DE AQUI POR FAVOR
 // AGREGA TUS DATOS SI QIERES, PERO NO QUITES LOS MIOS
 let handler = async m => m.reply(`
@@ -27,3 +28,4 @@ handler.tags = ['info']
 handler.command = /^(dona|donar|apoyar|dardinero|apoyo)$/i
 
 module.exports = handler
+*/
