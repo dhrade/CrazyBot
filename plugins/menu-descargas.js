@@ -14,8 +14,8 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let username = conn.getName(who)
 //let vn = './media/mariana.mp3'
 let menu =`
-╭━〘 🐈⚡️🐈⚡️🐈⚡️🐈⚡️🐈 〙━╮
- ‖ ֎┉┉┉⊰ 𝙂𝙖𝙩𝙖𝘽𝙤𝙩 | MIAUU ⊱┉┉┉֍
+╭━〘 🤡⚡️🤡⚡️🤡⚡️🤡 〙━╮
+ ‖ ֎┉┉┉⊰ 🤡𝘾𝙧𝙖𝙯𝙮Bot🤡 ⊱┉┉┉֍
  ‖ 💖 *¡𝗛ola! ${username}* 💖
  ‖    ֎┉┉┉┉┉┉⊰ 🌟 ⊱┉┉┉┉┉┉┉֍
  ‖
@@ -51,10 +51,10 @@ let menu =`
  ‖⇛ 🚀 _${usedPrefix}frase *escriba un número (1 - 99)*_
  ‖⇛ 🚀 _${usedPrefix}wpaesthetic | fondoaesthetic_
  ‖ ➥ ⧼ *_MENÚ DE DESCARGAS_* ⧽  
-╰━〘 🐈🌟🐈🌟🐈🌟🐈🌟🐈 〙━╯
-𝙂𝙖𝙩𝙖Bot`.trim()
+╰━〘 🤡⚡️🤡⚡️🤡⚡️🤡 〙━╯
+𝘾𝙧𝙖𝙯𝙮Bot`.trim()
 let mentionedJid = [who]
-conn.send3ButtonImg(m.chat, pp, menu, '©GataBot', '🔐 𝙂𝙀𝙎𝙏𝙄𝙊𝙉 𝘿𝙀 𝙂𝙍𝙐𝙋𝙊 🔐', `#menugrupo`, '🎨 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘾𝙍𝙀𝘼𝘾𝙄𝙊𝙉 🎨', `#menucreador`, '💥 𝘼𝙉𝙄𝙈𝙀/𝙍𝘼𝙉𝘿𝙊𝙈 💥', `#menurandom`, m, false, { contextInfo: { mentionedJid }})
+conn.send3ButtonImg(m.chat, pp, menu, '©CrazyBot', '🔐 𝙂𝙀𝙎𝙏𝙄𝙊𝙉 𝘿𝙀 𝙂𝙍𝙐𝙋𝙊 🔐', `#menugrupo`, '🎨 𝙈𝙀𝙉𝙐 𝘿𝙀 𝘾𝙍𝙀𝘼𝘾𝙄𝙊𝙉 🎨', `#menucreador`, '💥 𝘼𝙉𝙄𝙈𝙀/𝙍𝘼𝙉𝘿𝙊𝙈 💥', `#menurandom`, m, false, { contextInfo: { mentionedJid }})
 //await await await await await await conn.sendFile(m.chat, vn, 'mariana.mp3', null, m, true, {
 //type: 'audioMessage', 
 //ptt: true 
