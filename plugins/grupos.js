@@ -1,3 +1,4 @@
+/*
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let info = `
 *_➡️ GRUPO(S) OFICIAL DE GATABOT_*
@@ -13,3 +14,4 @@ conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '🐈 𝙂𝙖𝙩𝙖 𝘿𝙞
 handler.command = /^(grupos|gruposofc|gruposofc)$/i
 
 module.exports = handler
+*/
