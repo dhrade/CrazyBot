@@ -42,7 +42,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let usersmythic = sortedmythic.map(v => v[0])
     let userslegendary = sortedlegendary.map(v => v[0])
     let str = `
-*😸 _Experiencia total usando GataBot_* *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*\n
+* _Experiencia total usando 🤡𝘾𝙧𝙖𝙯𝙮Bot🤡_* *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*\n
 ✨ *_XP:_ ${exp}*
 `.trim()
     conn.reply(m.chat, str, m)
