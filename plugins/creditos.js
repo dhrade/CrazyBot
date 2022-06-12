@@ -1,3 +1,4 @@
+/*
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let info = `
 ╭═════• ೋ•✧๑♡๑✧•ೋ •═════╮ 
@@ -30,3 +31,4 @@ conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '🐈 𝙂𝙖𝙩𝙖 𝘿𝙞
 handler.command = /^(creditos|CREDITOS|Creditos|Credito|Crédito)$/i
 
 module.exports = handler
+*/
