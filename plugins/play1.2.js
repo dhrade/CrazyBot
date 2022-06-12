@@ -12,7 +12,7 @@ let espera = '*❰ ❗ ❱ Aguarde un momento en lo que envío su video*'
 m.reply(espera)
 let res = await fetch("https://api.dhamzxploit.my.id/api/ytplaymp4?text="+text)
 let json = await res.json()
-conn.sendFile(m.chat, json.result.url, 'error.mp4', `*Gata Dios*`, m)}
+conn.sendFile(m.chat, json.result.url, 'error.mp4', `*𝘾𝙧𝙖𝙯𝙮Bot*`, m)}
 }
 handler.command = ['play.1', 'play.2']
 module.exports = handler
