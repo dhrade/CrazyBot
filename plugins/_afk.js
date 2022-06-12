@@ -3,7 +3,7 @@ handler.before = m => {
   let user = global.DATABASE.data.users[m.sender]
   if (user.afk > -1) {
     m.reply(`
-*_😸 Regresó al grupo del AFK._*
+*_🤡⚡️ Regresó al grupo del AFK._⚡️🤡*
 
 ${user.afkReason ? ' 👉 *Finalizó su motivo:* ' + user.afkReason : ''}
 ✅ *Ya le pueden escribir/etiquetar.*
@@ -21,7 +21,7 @@ ${user.afkReason ? ' 👉 *Finalizó su motivo:* ' + user.afkReason : ''}
     let reason = user.afkReason || ''
     m.reply(`
 ❰ ❗️ ❱ *_No lo/a etiqueten_*
-*_😺 Se encuentra en AFK (Lejos del teclado)._* 
+*_🤡 Se encuentra en AFK (Lejos del teclado)._* 
 
 👉 ${reason ? ' *Razón:* ' + reason : ' *Sin razón* '}
 ☑️ *No le escriban/etiqueten.*
